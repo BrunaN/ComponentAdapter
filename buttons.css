@@ -1,0 +1,66 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.button #text{
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.button button span{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+
+.small, .big, .inside-big{
+    margin: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.small button{
+    margin: 5px;
+}
+
+.big button{
+    margin: 25px;
+}
+
+.inside-big button{
+    padding: 15px 25px;
+}
+
+.space-normal, .space-small, .space-big, .space-xbig{
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.space-small{
+    line-height: 30px;
+}
+
+.space-big{
+    line-height: 40px;
+}
+
+.space-xbig{
+    line-height: 50px;
+}
