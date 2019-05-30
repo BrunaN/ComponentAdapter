@@ -54,10 +54,10 @@ decreaseTextLineButton.addEventListener("click", function(){
     lineHeight = styleParagraph.getPropertyValue('line-height');
 });
 
-let buttonStyle = "";
-let buttonGroup = "";
-let linkGroup = "";
-let formGroup = "";
+let buttonStyle;
+let buttonGroup;
+let linkGroup;
+let formGroup;
 
 function buttonSelected(className){
     buttonStyle = className;
@@ -93,12 +93,12 @@ next.addEventListener("click", function(){
 
     content[countContent].style.display = 'none';
     countContent++;
-    content[countContent].style.display = 'flex';
 
-    if(countContent >= 5){
-        content[countContent].style.display = 'none';
+    if(countContent >= 6){
         finish.style.display = 'flex';
     }
+
+    content[countContent].style.display = 'flex';
 
     components.fontSize = fontSize;
     localStorage.setItem('fontSize', components.fontSize);
@@ -107,7 +107,7 @@ next.addEventListener("click", function(){
     components.button = buttonStyle;
     localStorage.setItem('buttonStyle', components.button);
     components.buttonGroupSpace = buttonGroup;
-    localStorage.setItem('buttongroup', components.buttonGroupSpace);
+    localStorage.setItem('buttonGroup', components.buttonGroupSpace);
     components.linkGroupSpace = linkGroup;
     localStorage.setItem('linkGroup', components.linkGroupSpace);
     components.formGroup = formGroup;
