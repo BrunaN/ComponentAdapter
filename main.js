@@ -12,7 +12,7 @@ let countContent = 0;
 next.addEventListener("click", function(){
     content[countContent].style.display = 'none';
     countContent++;
-    content[countContent].style.display = 'block';
+    content[countContent].style.display = 'flex';
 });
 
 increaseButton.addEventListener("click", function(){

@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <div class="content text">
+        <div class="content text" style="display: none">
             <div>
                 <button id="decrease" type="button" class="btn btn-primary">Diminuir
                     <span>-</span>
@@ -25,13 +25,25 @@
                 </button>
             </div>
         </div>
-        <div class="content" style="display: none">
-            <button type="button" class="btn btn-primary btn-sm">Primary</button>
-            <button type="button" class="btn btn-primary btn-lg">Primary</button>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-primary btn-block">Primary</button>
+
+        <div class="content button" style="display: none">
+            <div class="flex">
+                <div class="button-small">
+                    <button type="button" class="btn btn-primary btn-sm">Primary</button>
+                </div>
+                <div class="button-normal">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="button-large">
+                    <button type="button" class="btn btn-primary btn-lg">Primary</button>
+                </div>
+            </div>
+            <div class="button-block">
+                <button type="button" class="btn btn-primary btn-block">Primary</button>
+            </div>
         </div>
-        <div class="content" style="display: none">
+
+        <div class="content button-group" style="display: flex">
             <div class="small">
                 <button type="button" class="btn btn-primary">botão</button>
                 <button type="button" class="btn btn-primary">botão</button>
