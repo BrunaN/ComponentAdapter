@@ -113,7 +113,12 @@
     height: 100%;
 }
 
+.finish h1{
+    margin-bottom: 40px;
+}
+
 .finish h4{
-    margin-top: 20px;
-    margin-bottom: 25px;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
 }
