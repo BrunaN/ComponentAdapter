@@ -105,10 +105,10 @@ function linkGroupSelected(className) {
 
 function formGroupSelected(className) {
     if (formGroup != undefined) {
-        document.getElementsByClassName(formGroup)[0].classList.remove('selected');
+        document.getElementById(formGroup).classList.remove('selected');
     }
 
-    document.getElementsByClassName(className)[0].classList.add('selected');
+    document.getElementById(className).classList.add('selected');
 
     formGroup = className;
     components.formGroup = formGroup;
