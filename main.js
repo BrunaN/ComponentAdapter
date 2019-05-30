@@ -95,6 +95,11 @@ next.addEventListener("click", function(){
     countContent++;
     content[countContent].style.display = 'flex';
 
+    if(countContent >= 5){
+        content[countContent].style.display = 'none';
+        content[0].style.display = 'flex';
+    }
+
     components.fontSize = fontSize;
     components.lineHeight = lineHeight;
     components.button = buttonStyle;
