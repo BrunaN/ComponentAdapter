@@ -20,7 +20,7 @@ for(let i = 0; i < paragraphs.length; i++){
 
 for(let i = 0; i < buttons.length; i++){
     buttons[i].classList.add(buttonStyle);
-    buttons[i].classList.add(buttonGroup);
+    buttons[i].style.margin = buttonGroup;
 }
 
 for(let i = 0; i < forms.length; i++){

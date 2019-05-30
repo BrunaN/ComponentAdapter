@@ -69,6 +69,7 @@ decreaseTextLineButton.addEventListener("click", function () {
 
 let buttonStyle;
 let buttonGroup;
+let marginButtonGroup
 let linkGroup;
 let formGroup;
 
@@ -79,7 +80,7 @@ function buttonSelected(className) {
     components.button = buttonStyle;
 }
 
-function buttonGroupSelected(className) {
+function buttonGroupSelected(className, margin) {
     if (buttonGroup != undefined) {
         document.getElementsByClassName(buttonGroup)[0].classList.remove('selected');
     }
@@ -87,7 +88,8 @@ function buttonGroupSelected(className) {
     document.getElementsByClassName(className)[0].classList.add('selected');
 
     buttonGroup = className;
-    components.buttonGroupSpace = buttonGroup;
+    marginButtonGroup = margin;
+    components.buttonGroupSpace = margin;
 }
 
 function linkGroupSelected(className) {
