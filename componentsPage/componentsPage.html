@@ -16,7 +16,7 @@
 
 <body>
     <div class="container">
-        <div class="content text" style="display: flex">
+        <div class="content text">
             <div>
                 <button id="decrease" type="button" class="btn btn-primary">Diminuir
                     <span>-</span>
@@ -131,7 +131,7 @@
         </div>
         <div class="content forms-group">
             <div onclick="formGroupSelected('form-small')">
-                <form class="form-small" >
+                <form class="form-small">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu email...">
@@ -200,9 +200,16 @@
             </div>
         </div>
         <div class="finish">
-            Acabou
-            <button onclick="window.location='../adaptedPage/adaptedPage.html'"
-            type="button" class="btn btn-outline-secondary btn-lg">outra página</button>
+            <h3>
+                Você selecionou todos os componentes!
+            </h3>
+            <h4>
+                Criamos uma página com os componentes selecionados
+            </h4>
+            <div>
+                <button onclick="window.location='../adaptedPage/adaptedPage.html'" 
+                type="button" class="btn btn-outline-secondary btn-lg">Carregar Página</button>
+            </div>
         </div>
         <button id="next" type="button" class="btn btn-outline-secondary btn-lg">Próximo</button>
     </div>

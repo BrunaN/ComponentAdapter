@@ -113,6 +113,8 @@ function formGroupSelected(className) {
     localStorage.setItem('formGroup', components.formGroup);
 }
 
+content[0].style.display = 'flex';
+
 next.addEventListener("click", function () {
 
     for (let i = 0; i < paragraph.length; i++) {
@@ -124,6 +126,7 @@ next.addEventListener("click", function () {
 
     if (countContent >= 6) {
         finish.style.display = 'flex';
+        next.style.display = 'none';
     }
 
     content[countContent].style.display = 'flex';
