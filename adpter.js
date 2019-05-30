@@ -5,8 +5,6 @@ let buttonGroup = localStorage.getItem('buttonGroup');
 let linkGroup = localStorage.getItem('linkGroup');
 let formGroup = localStorage.getItem('formGroup');
 
-console.log(fontSize, lineHeight, buttonStyle, buttonGroup, linkGroup, formGroup);
-
 let forms = document.getElementsByTagName('form');
 let paragraphs = document.getElementsByTagName('p');
 let buttons = document.getElementsByClassName('btn');
@@ -22,4 +20,13 @@ for(let i = 0; i < paragraphs.length; i++){
 
 for(let i = 0; i < buttons.length; i++){
     buttons[i].classList.add(buttonStyle);
+    buttons[i].classList.add(buttonGroup);
+}
+
+for(let i = 0; i < forms.length; i++){
+    forms[i].classList.add(formGroup);
+}
+
+for(let i = 0; i < links.length; i++){
+    links[i].classList.add(linkGroup);
 }
