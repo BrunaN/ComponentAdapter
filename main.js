@@ -52,16 +52,30 @@ decreaseTextLineButton.addEventListener("click", function(){
 });
 
 let buttonStyle = "";
+let buttonGroup = "";
+let linkGroup = "";
+let formGroup = "";
 
 function buttonSelected(className){
     buttonStyle = className;
-    console.log(buttonStyle);
+}
+
+function buttonGroupSelected(className){
+    buttonGroup = className;
+}
+
+function linkGroupSelected(className){
+    linkGroup = className;
+}
+
+function formGroupSelected(className){
+    formGroup = className;
 }
 
 
 let components = {
-    'fontSize': fontSize,
-    'lineHeight': lineHeight,
+    'fontSize': '',
+    'lineHeight': '',
     'button': '',
     'buttonGroupSpace': '',
     'linkGroupSpace': '',
@@ -79,6 +93,12 @@ next.addEventListener("click", function(){
     countContent++;
     content[countContent].style.display = 'flex';
 
-    console.log(components);
+    components.fontSize = fontSize;
+    components.lineHeight = lineHeight;
     components.button = buttonStyle;
+    components.buttonGroupSpace = buttonGroup;
+    components.linkGroupSpace = linkGroup;
+    components.formGroup = formGroup;
+    console.log(components);
+
 });
