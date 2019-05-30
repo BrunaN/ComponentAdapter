@@ -17,5 +17,9 @@ let body = document.getElementsByTagName('body')[0];
 body.style.fontSize = fontSize;
 
 for(let i = 0; i < paragraphs.length; i++){
-    paragraphs[0].style.lineHeight = lineHeight;
+    paragraphs[i].style.lineHeight = lineHeight;
+}
+
+for(let i = 0; i < buttons.length; i++){
+    buttons[i].classList.add(buttonStyle);
 }

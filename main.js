@@ -18,63 +18,6 @@ let fontSize = style.getPropertyValue('font-size');
 let styleParagraph = window.getComputedStyle(paragraph[1], null);
 let lineHeight = styleParagraph.getPropertyValue('line-height');
 
-increaseButton.addEventListener("click", function(){
-    let x = parseInt(fontSize.replace("px",""));
-
-    text.style.fontSize = x + 5 +'px';
-    fontSize = style.getPropertyValue('font-size');
-});
-
-decreaseButton.addEventListener("click", function(){
-    let x = parseInt(fontSize.replace("px",""));
-
-    text.style.fontSize = x - 5 +'px';
-    fontSize = style.getPropertyValue('font-size');
-});
-
-increaseTextLineButton.addEventListener("click", function(){
-    lineHeight = styleParagraph.getPropertyValue('line-height');
-    let x = parseInt(lineHeight.replace("px",""));
-    
-    for(let i = 0; i < paragraph.length; i++){
-        paragraph[i].style.lineHeight = x + 2 + 'px';
-    } 
-
-    lineHeight = styleParagraph.getPropertyValue('line-height');
-});
-
-decreaseTextLineButton.addEventListener("click", function(){
-    lineHeight = styleParagraph.getPropertyValue('line-height');
-    let x = parseInt(lineHeight.replace("px",""));
-    
-    for(let i = 0; i < paragraph.length; i++){
-        paragraph[i].style.lineHeight = x - 2 + 'px';
-    } 
-
-    lineHeight = styleParagraph.getPropertyValue('line-height');
-});
-
-let buttonStyle;
-let buttonGroup;
-let linkGroup;
-let formGroup;
-
-function buttonSelected(className){
-    buttonStyle = className;
-}
-
-function buttonGroupSelected(className){
-    buttonGroup = className;
-}
-
-function linkGroupSelected(className){
-    linkGroup = className;
-}
-
-function formGroupSelected(className){
-    formGroup = className;
-}
-
 let components = {
     'fontSize': '',
     'lineHeight': '',
@@ -84,34 +27,94 @@ let components = {
     'formGroup': '',
 };
 
+increaseButton.addEventListener("click", function () {
+    let x = parseInt(fontSize.replace("px", ""));
 
-next.addEventListener("click", function(){
-    
-    for(let i = 0; i < paragraph.length; i++){
+    text.style.fontSize = x + 5 + 'px';
+    fontSize = style.getPropertyValue('font-size');
+    components.fontSize = fontSize;
+});
+
+decreaseButton.addEventListener("click", function () {
+    let x = parseInt(fontSize.replace("px", ""));
+
+    text.style.fontSize = x - 5 + 'px';
+    fontSize = style.getPropertyValue('font-size');
+    components.fontSize = fontSize;
+});
+
+increaseTextLineButton.addEventListener("click", function () {
+    lineHeight = styleParagraph.getPropertyValue('line-height');
+    let x = parseInt(lineHeight.replace("px", ""));
+
+    for (let i = 0; i < paragraph.length; i++) {
+        paragraph[i].style.lineHeight = x + 2 + 'px';
+    }
+
+    lineHeight = styleParagraph.getPropertyValue('line-height');
+    components.lineHeight = lineHeight;
+});
+
+decreaseTextLineButton.addEventListener("click", function () {
+    lineHeight = styleParagraph.getPropertyValue('line-height');
+    let x = parseInt(lineHeight.replace("px", ""));
+
+    for (let i = 0; i < paragraph.length; i++) {
+        paragraph[i].style.lineHeight = x - 2 + 'px';
+    }
+
+    lineHeight = styleParagraph.getPropertyValue('line-height');
+    components.lineHeight = lineHeight;
+});
+
+let buttonStyle;
+let buttonGroup;
+let linkGroup;
+let formGroup;
+
+function buttonSelected(className) {
+    buttonStyle = className;
+    components.button = buttonStyle;
+}
+
+function buttonGroupSelected(className) {
+    buttonGroup = className;
+    components.buttonGroupSpace = buttonGroup;
+}
+
+function linkGroupSelected(className) {
+    linkGroup = className;
+    components.linkGroupSpace = linkGroup;
+}
+
+function formGroupSelected(className) {
+    formGroup = className;
+    components.formGroup = formGroup;
+    localStorage.setItem('formGroup', components.formGroup);
+}
+
+next.addEventListener("click", function () {
+
+    for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].style.fontSize = fontSize;
-    } 
+    }
 
     content[countContent].style.display = 'none';
     countContent++;
 
-    if(countContent >= 6){
+    if (countContent >= 6) {
         finish.style.display = 'flex';
     }
 
     content[countContent].style.display = 'flex';
 
-    components.fontSize = fontSize;
-    localStorage.setItem('fontSize', components.fontSize);
-    components.lineHeight = lineHeight;
-    localStorage.setItem('lineHeight', components.lineHeight);
-    components.button = buttonStyle;
-    localStorage.setItem('buttonStyle', components.button);
-    components.buttonGroupSpace = buttonGroup;
-    localStorage.setItem('buttonGroup', components.buttonGroupSpace);
-    components.linkGroupSpace = linkGroup;
-    localStorage.setItem('linkGroup', components.linkGroupSpace);
-    components.formGroup = formGroup;
-    localStorage.setItem('formGroup', components.formGroup);
     console.log(components);
+
+    localStorage.setItem('fontSize', components.fontSize);
+    localStorage.setItem('lineHeight', components.lineHeight);
+    localStorage.setItem('buttonStyle', components.button);
+    localStorage.setItem('buttonGroup', components.buttonGroupSpace);
+    localStorage.setItem('linkGroup', components.linkGroupSpace);
+    localStorage.setItem('formGroup', components.formGroup);
 
 });
