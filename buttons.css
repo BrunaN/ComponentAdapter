@@ -36,12 +36,12 @@
     align-items: center;
 }
 
-.button-group{
+.button-group div{
     flex: 1;
+    height: 50%;
 }
 
-.small, .big, .inside-big{
-    height: 25%;
+.button-group div div{
     border: 1px solid #ccc;
     margin: 20px;
     display: flex;
@@ -54,12 +54,16 @@
     margin: 5px;
 }
 
+.normal button{
+    margin: 10px;
+}
+
 .big button{
     margin: 25px;
 }
 
-.inside-big button{
-    padding: 15px 25px;
+.xbig button{
+    margin: 40px;
 }
 
 .space-normal, .space-small, .space-big, .space-xbig{
