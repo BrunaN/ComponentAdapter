@@ -3,20 +3,26 @@
     width: 100vw;
 }
 
-.content{
+.content01,
+.content02,
+.content03,
+.content04,
+.content05,
+.content06,
+.content07{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 85%;
     width: 100%;
 }
 
-.button #text{
+.text #text{
     padding: 0 20px;
     font-size: 18px;
 }
 
-.button button span{
+.text button span{
     font-weight: bold;
     font-size: 25px;
     line-height: 20px;
