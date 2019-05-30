@@ -48,6 +48,13 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.button-group div div:hover{
+    border-color: transparent;
+    box-shadow: 1px 1px 4px 2px #007bff;
 }
 
 .text-p {
@@ -76,9 +83,19 @@
     align-items: center;
 }
 
+.link-group > div:hover{
+    border-color: transparent;
+    box-shadow: 1px 1px 4px 2px #007bff;
+}
+
 .forms-group > div{
     flex: 1;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 20px;
+}
+
+.forms-group > div:hover{
+    border-color: transparent;
+    box-shadow: 1px 1px 4px 2px #007bff;
 }
