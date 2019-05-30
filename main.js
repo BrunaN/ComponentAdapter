@@ -62,7 +62,10 @@ function buttonSelected(className){
 let components = {
     'fontSize': fontSize,
     'lineHeight': lineHeight,
-    'button': ''
+    'button': '',
+    'buttonGroupSpace': '',
+    'linkGroupSpace': '',
+    'formGroup': '',
 };
 
 
