@@ -1,0 +1,84 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.content{
+    height: 82%;
+    width: 100%;
+}
+
+.text, .button, .button-group, .text-p, .link-group, .forms-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text #text{
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.text button span{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.button div{
+    flex: 1;
+}
+
+.button .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group div{
+    flex: 1;
+    height: 50%;
+}
+
+.button-group div div{
+    border: 1px solid #ccc;
+    margin: 20px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-p {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-p button{
+    margin: 10px 0;
+    margin-right: 20px;
+}
+
+.text-p button span{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+
+.link-group > div{
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+}
+
+.forms-group > div{
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+}
