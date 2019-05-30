@@ -9,7 +9,7 @@
 }
 
 .text, .button, .button-group, .text-p, .link-group, .forms-group{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -52,6 +52,10 @@
     border-radius: .25rem;
 }
 
+.button-group div div:hover{
+    border-color: #007bff;
+}
+
 .selected {
     border-color: transparent;
     box-shadow: 1px 1px 4px 2px #007bff;
@@ -74,18 +78,18 @@
     padding-left: 10px;
 }
 
-
 .link-group > div{
     flex: 1;
     border: 1px solid #ccc;
     padding: 20px;
     margin: 20px;
     align-items: center;
+    cursor: pointer;
+    border-radius: .25rem;
 }
 
-.link-group > div:hover{
-    border-color: transparent;
-    box-shadow: 1px 1px 4px 2px #007bff;
+.link-group > div:hover{    
+    border-color: #007bff;
 }
 
 .forms-group > div{
@@ -93,9 +97,14 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin: 20px;
+    cursor: pointer;
+    border-radius: .25rem;
 }
 
 .forms-group > div:hover{
-    border-color: transparent;
-    box-shadow: 1px 1px 4px 2px #007bff;
+    border-color: #007bff;
+}
+
+.finish{
+    display: none;
 }
