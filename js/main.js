@@ -10,6 +10,8 @@ let finish = document.getElementsByClassName('finish')[0];
 let paragraph = document.getElementsByTagName('p');
 
 let next = document.getElementById("next");
+let loadPage = document.getElementById("load-page");
+
 let countContent = 0;
 
 let style = window.getComputedStyle(text, null);
@@ -71,6 +73,7 @@ let buttonStyle;
 let buttonGroup;
 let marginButtonGroup
 let linkGroup;
+let marginLinkGroup;
 let formGroup;
 
 let countSelected = 0;
@@ -92,7 +95,7 @@ function buttonGroupSelected(className, margin) {
     components.buttonGroupSpace = margin;
 }
 
-function linkGroupSelected(className) {
+function linkGroupSelected(className, margin) {
     if (linkGroup != undefined) {
         document.getElementsByClassName(linkGroup)[0].classList.remove('selected');
     }
@@ -100,7 +103,8 @@ function linkGroupSelected(className) {
     document.getElementsByClassName(className)[0].classList.add('selected');
 
     linkGroup = className;
-    components.linkGroupSpace = linkGroup;
+    marginLinkGroup = margin
+    components.linkGroupSpace = margin;
 }
 
 function formGroupSelected(className) {
@@ -129,6 +133,7 @@ next.addEventListener("click", function () {
     if (countContent >= 6) {
         finish.style.display = 'flex';
         next.style.display = 'none';
+        loadPage.style.display = 'flex';
     }
 
     content[countContent].style.display = 'flex';

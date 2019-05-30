@@ -28,5 +28,5 @@ for(let i = 0; i < forms.length; i++){
 }
 
 for(let i = 0; i < links.length; i++){
-    links[i].classList.add(linkGroup);
+    links[i].style.margin = linkGroup;
 }

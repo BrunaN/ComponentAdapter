@@ -88,7 +88,7 @@
         </div>
 
         <div class="content link-group">
-            <div class="space-small" onclick="linkGroupSelected('space-small')">
+            <div class="space-small" onclick="linkGroupSelected('space-small', '0')">
                 <div>
                     <a href="#">Página Inicial</a>
                     <a href="#">Perfil</a>
@@ -98,7 +98,7 @@
                     <a href="#">Cadastro</a>
                 </div>
             </div>
-            <div class="space-normal" onclick="linkGroupSelected('space-normal')">
+            <div class="space-normal" onclick="linkGroupSelected('space-normal', '10px')">
                 <div>
                     <a href="#">Página Inicial</a>
                     <a href="#">Perfil</a>
@@ -108,7 +108,7 @@
                     <a href="#">Cadastro</a>
                 </div>
             </div>
-            <div class="space-big" onclick="linkGroupSelected('space-big')">
+            <div class="space-big" onclick="linkGroupSelected('space-big', '15px')">
                 <div>
                     <a href="#">Página Inicial</a>
                     <a href="#">Perfil</a>
@@ -118,7 +118,7 @@
                     <a href="#">Cadastro</a>
                 </div>
             </div>
-            <div class="space-xbig" onclick="linkGroupSelected('space-xbig')">
+            <div class="space-xbig" onclick="linkGroupSelected('space-xbig', '25px')">
                 <div>
                     <a href="#">Página Inicial</a>
                     <a href="#">Perfil</a>
@@ -206,15 +206,12 @@
             <h4>
                 Criamos uma página com os componentes selecionados
             </h4>
-            <div>
-                <button onclick="window.location='../adaptedPage/adaptedPage.html'" 
-                type="button" class="btn btn-outline-secondary btn-lg">Carregar Página</button>
-            </div>
         </div>
         <button id="next" type="button" class="btn btn-outline-secondary btn-lg">Próximo</button>
+        <button id="load-page" onclick="window.location='../adaptedPage/adaptedPage.html'" type="button" class="btn btn-outline-secondary btn-lg">Carregar Página</button>
     </div>
 
-    <script src="../main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
