@@ -31,18 +31,6 @@ decreaseButton.addEventListener("click", function(){
     fontSize = style.getPropertyValue('font-size');
 });
 
-next.addEventListener("click", function(){
-    
-    for(let i = 0; i < paragraph.length; i++){
-        paragraph[i].style.fontSize = fontSize;
-    } 
-
-    content[countContent].style.display = 'none';
-    countContent++;
-    content[countContent].style.display = 'flex';
-});
-
-
 increaseTextLineButton.addEventListener("click", function(){
     let x = parseInt(lineHeight.replace("px",""));
     
@@ -61,4 +49,33 @@ decreaseTextLineButton.addEventListener("click", function(){
     } 
 
     lineHeight = styleParagraph.getPropertyValue('line-height');
+});
+
+let buttonStyle = "";
+
+function buttonSelected(className){
+    buttonStyle = className;
+    console.log(buttonStyle);
+}
+
+
+let components = {
+    'fontSize': fontSize,
+    'lineHeight': lineHeight,
+    'button': ''
+};
+
+
+next.addEventListener("click", function(){
+    
+    for(let i = 0; i < paragraph.length; i++){
+        paragraph[i].style.fontSize = fontSize;
+    } 
+
+    content[countContent].style.display = 'none';
+    countContent++;
+    content[countContent].style.display = 'flex';
+
+    console.log(components);
+    components.button = buttonStyle;
 });

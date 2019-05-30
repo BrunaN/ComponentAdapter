@@ -29,17 +29,21 @@
         <div class="content button" style="display: none">
             <div class="flex">
                 <div class="button-small">
-                    <button type="button" class="btn btn-primary btn-sm">Primary</button>
+                    <button id="btn-sm" onclick="buttonSelected('btn-sm')"
+                    type="button" class="btn btn-primary btn-sm">Primary</button>
                 </div>
                 <div class="button-normal">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button id="btn" onclick="buttonSelected('btn')"
+                    type="button" class="btn btn-primary btn">Primary</button>
                 </div>
                 <div class="button-large">
-                    <button type="button" class="btn btn-primary btn-lg">Primary</button>
+                    <button id="btn-lg" onclick="buttonSelected('btn-lg')"
+                    type="button" class="btn btn-primary btn-lg">Primary</button>
                 </div>
             </div>
             <div class="button-block">
-                <button type="button" class="btn btn-primary btn-block">Primary</button>
+                <button id="btn-block" onclick="buttonSelected('btn-block')"
+                type="button" class="btn btn-primary btn-block">Primary</button>
             </div>
         </div>
 
@@ -200,7 +204,7 @@
         <button id="next" type="button" class="btn btn-outline-secondary btn-lg">Próximo</button>
     </div>
 
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
 </body>
 
 </html>
