@@ -72,22 +72,42 @@ let buttonGroup;
 let linkGroup;
 let formGroup;
 
+let countSelected = 0;
+
 function buttonSelected(className) {
     buttonStyle = className;
     components.button = buttonStyle;
 }
 
 function buttonGroupSelected(className) {
+    if (buttonGroup != undefined) {
+        document.getElementsByClassName(buttonGroup)[0].classList.remove('selected');
+    }
+
+    document.getElementsByClassName(className)[0].classList.add('selected');
+
     buttonGroup = className;
     components.buttonGroupSpace = buttonGroup;
 }
 
 function linkGroupSelected(className) {
+    if (linkGroup != undefined) {
+        document.getElementsByClassName(linkGroup)[0].classList.remove('selected');
+    }
+
+    document.getElementsByClassName(className)[0].classList.add('selected');
+
     linkGroup = className;
     components.linkGroupSpace = linkGroup;
 }
 
 function formGroupSelected(className) {
+    if (formGroup != undefined) {
+        document.getElementsByClassName(formGroup)[0].classList.remove('selected');
+    }
+
+    document.getElementsByClassName(className)[0].classList.add('selected');
+
     formGroup = className;
     components.formGroup = formGroup;
     localStorage.setItem('formGroup', components.formGroup);
