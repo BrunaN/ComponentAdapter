@@ -32,6 +32,7 @@ decreaseButton.addEventListener("click", function(){
 });
 
 increaseTextLineButton.addEventListener("click", function(){
+    lineHeight = styleParagraph.getPropertyValue('line-height');
     let x = parseInt(lineHeight.replace("px",""));
     
     for(let i = 0; i < paragraph.length; i++){
@@ -42,6 +43,7 @@ increaseTextLineButton.addEventListener("click", function(){
 });
 
 decreaseTextLineButton.addEventListener("click", function(){
+    lineHeight = styleParagraph.getPropertyValue('line-height');
     let x = parseInt(lineHeight.replace("px",""));
     
     for(let i = 0; i < paragraph.length; i++){
