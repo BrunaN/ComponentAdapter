@@ -5,6 +5,7 @@ let increaseTextLineButton = document.getElementById('increase-text-line');
 let decreaseTextLineButton = document.getElementById('decrease-text-line');
 
 let content = document.getElementsByClassName('content');
+let finish = document.getElementsByClassName('finish')[0];
 
 let paragraph = document.getElementsByTagName('p');
 
@@ -74,7 +75,6 @@ function formGroupSelected(className){
     formGroup = className;
 }
 
-
 let components = {
     'fontSize': '',
     'lineHeight': '',
@@ -97,15 +97,21 @@ next.addEventListener("click", function(){
 
     if(countContent >= 5){
         content[countContent].style.display = 'none';
-        content[0].style.display = 'flex';
+        finish.style.display = 'flex';
     }
 
     components.fontSize = fontSize;
+    localStorage.setItem('fontSize', components.fontSize);
     components.lineHeight = lineHeight;
+    localStorage.setItem('lineHeight', components.lineHeight);
     components.button = buttonStyle;
+    localStorage.setItem('buttonStyle', components.button);
     components.buttonGroupSpace = buttonGroup;
+    localStorage.setItem('buttongroup', components.buttonGroupSpace);
     components.linkGroupSpace = linkGroup;
+    localStorage.setItem('linkGroup', components.linkGroupSpace);
     components.formGroup = formGroup;
+    localStorage.setItem('formGroup', components.formGroup);
     console.log(components);
 
 });
