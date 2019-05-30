@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.text, .button, .button-group{
+.text, .button, .button-group, .link-group{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,21 +66,33 @@
     margin: 40px;
 }
 
-.space-normal, .space-small, .space-big, .space-xbig{
-    margin: 20px;
+.link-group > div{
+    flex: 1;
     border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
 }
 
-.space-small{
-    line-height: 30px;
+.space-normal a{
+    margin: 10px;
 }
 
-.space-big{
-    line-height: 40px;
+.space-big a{
+    margin: 15px;
 }
 
-.space-xbig{
-    line-height: 50px;
+.space-xbig a{
+    margin: 25px;
+}
+
+.form-normal .form-group{
+    margin: 20px 0;
+}
+
+.form-big .form-group{
+    margin: 30px 0;
+}
+
+.form-xbig .form-group{
+    margin: 40px 0;
 }
