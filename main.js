@@ -2,12 +2,17 @@ let text = document.getElementById('text');
 let increaseButton = document.getElementById('increase');
 let decreaseButton = document.getElementById('decrease');
 
+let content = document.getElementsByClassName('content');
+
 let style = window.getComputedStyle(text, null);
 
 let next = document.getElementById("next");
+let countContent = 0;
 
 next.addEventListener("click", function(){
-    
+    content[countContent].style.display = 'none';
+    countContent++;
+    content[countContent].style.display = 'block';
 });
 
 increaseButton.addEventListener("click", function(){
