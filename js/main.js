@@ -32,7 +32,7 @@ let components = {
 increaseButton.addEventListener("click", function () {
     let x = parseInt(fontSize.replace("px", ""));
 
-    text.style.fontSize = x + 5 + 'px';
+    text.style.fontSize = x + 2 + 'px';
     fontSize = style.getPropertyValue('font-size');
     components.fontSize = fontSize;
 });
@@ -40,7 +40,7 @@ increaseButton.addEventListener("click", function () {
 decreaseButton.addEventListener("click", function () {
     let x = parseInt(fontSize.replace("px", ""));
 
-    text.style.fontSize = x - 5 + 'px';
+    text.style.fontSize = x - 2 + 'px';
     fontSize = style.getPropertyValue('font-size');
     components.fontSize = fontSize;
 });
