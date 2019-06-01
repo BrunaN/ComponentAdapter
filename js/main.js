@@ -5,6 +5,7 @@ let increaseTextLineButton = document.getElementById('increase-text-line');
 let decreaseTextLineButton = document.getElementById('decrease-text-line');
 
 let content = document.getElementsByClassName('content');
+let containerText = document.getElementsByClassName('container-text')[0];
 let finish = document.getElementsByClassName('finish')[0];
 
 let paragraph = document.getElementsByTagName('p');
@@ -28,6 +29,16 @@ let components = {
     'linkGroupSpace': '',
     'formGroup': '',
 };
+
+let texts = [
+    'Clique nos botões para tornar o espaço entre as linhas do texto mais adequado a você:',
+    'Selecione o tamanho do botão mais adequado a você:',
+    'Selecione a opção em que o espaço em branco entre os botões é mais adequado a você:',
+    'Selecione a opção em que o espaço em branco entre os links é mais adequado a você:',
+    'Selecione a opção em que o espaço em branco entre os elementos é mais adequado a você:'
+];
+
+let count = 0;
 
 increaseButton.addEventListener("click", function () {
     let x = parseInt(fontSize.replace("px", ""));
@@ -123,6 +134,9 @@ content[0].style.display = 'flex';
 
 next.addEventListener("click", function () {
 
+    containerText.innerHTML = texts[count];
+    count++;
+
     for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].style.fontSize = fontSize;
     }
@@ -133,6 +147,7 @@ next.addEventListener("click", function () {
     if (countContent >= 6) {
         finish.style.display = 'flex';
         next.style.display = 'none';
+        containerText.style.display = 'none';
         loadPage.style.display = 'flex';
     }
 

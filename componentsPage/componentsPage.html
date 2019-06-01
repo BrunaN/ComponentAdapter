@@ -9,13 +9,14 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="../main/components.css">
     <link rel="stylesheet" href="componentsPage.css">
-
-
     <title>Adaptação de Componentes</title>
 </head>
 
 <body>
     <div class="container">
+        <div class="container-text">
+            Clique nos botões para tornar o texto mais adequado a você:
+        </div>
         <div class="content text">
             <div>
                 <button id="decrease" type="button" class="btn btn-primary">Diminuir
@@ -28,55 +29,16 @@
             </div>
         </div>
 
-        <div class="content button">
-            <div class="flex">
-                <div class="button-small">
-                    <button id="btn-sm" onclick="buttonSelected('btn-sm')" type="button" class="btn btn-primary btn-sm">Primary</button>
-                </div>
-                <div class="button-normal">
-                    <button id="btn" onclick="buttonSelected('btn')" type="button" class="btn btn-primary btn">Primary</button>
-                </div>
-                <div class="button-large">
-                    <button id="btn-lg" onclick="buttonSelected('btn-lg')" type="button" class="btn btn-primary btn-lg">Primary</button>
-                </div>
-            </div>
-            <div class="button-block">
-                <button id="btn-block" onclick="buttonSelected('btn-block')" type="button" class="btn btn-primary btn-block">Primary</button>
-            </div>
-        </div>
-
-        <div class="content button-group">
-            <div>
-                <div class="small" onclick="buttonGroupSelected('small', '5px')">
-                    <button type="button" class="btn btn-primary">botão</button>
-                    <button type="button" class="btn btn-primary">botão</button>
-                </div>
-                <div class="normal" onclick="buttonGroupSelected('normal', '10px')">
-                    <button type="button" class="btn btn-primary">botão</button>
-                    <button type="button" class="btn btn-primary">botão</button>
-                </div>
-            </div>
-            <div>
-                <div class="big" onclick="buttonGroupSelected('big', '25px')">
-                    <button type="button" class="btn btn-primary">botão</button>
-                    <button type="button" class="btn btn-primary">botão</button>
-                </div>
-                <div class="xbig" onclick="buttonGroupSelected('xbig', '40px')">
-                    <button type="button" class="btn btn-primary">botão</button>
-                    <button type="button" class="btn btn-primary">botão</button>
-                </div>
-            </div>
-        </div>
-
         <div class="content text-p">
             <div>
-                <p>A distância da linha de base de uma linha tipográfica para outra é o que chamamos de entrelinha, do inglês,
-                    leading. Esse nome veio das tiras de chumbo (leads), que servem para separar as linhas dos tipos de metal.</p>
-                <p>A entrelinha padrão da maioria dos programas de edição de texto é sempre um pouco maior que a altura da versal
-                    do tipo. Ao passo que aumentamos a entrelinha, o bloco de texto se torna mais aberto e leve. Deve-se
-                    tomar cuidado para não aumentar demais, pois senão as linhas tornam-se elementos individuais, desprendendo-se
-                    do bloco. Isso prejudica a legibilidade pois, após a leitura de uma linha, o olho humano demora mais
-                    tempo para achar o início da linha abaixo.</p>
+                <p>Este é um exemplo de texto. Lorem ipsum suspendisse aenean euismod volutpat luctus torquent tellus ac netus,
+                    hac per felis torquent sapien elementum pretium semper. etiam fermentum consequat bibendum viverra venenatis
+                    conubia a molestie torquent proin, nisl ullamcorper pharetra phasellus nostra consectetur nam netus.
+                </p>
+                <p>
+                    turpis conubia mi dictumst mi taciti varius, auctor nullam non vulputate dictum. porttitor metus fermentum primis diam placerat
+                    tempus, quam dictum fusce netus conubia torquent, semper cubilia netus lacinia aliquam.
+                </p>
             </div>
             <div>
                 <button id="decrease-text-line" type="button" class="btn btn-primary">
@@ -87,6 +49,46 @@
                     Aumentar a distância entrelinhas dos textos
                     <span>+</span>
                 </button>
+            </div>
+        </div>
+
+        <div class="content button">
+            <div class="flex">
+                <div class="button-small">
+                    <button id="btn-sm" onclick="buttonSelected('btn-sm')" type="button" class="btn btn-outline-primary btn-sm">Botão</button>
+                </div>
+                <div class="button-normal">
+                    <button id="btn" onclick="buttonSelected('btn')" type="button" class="btn btn-outline-primary btn">Botão</button>
+                </div>
+                <div class="button-large">
+                    <button id="btn-lg" onclick="buttonSelected('btn-lg')" type="button" class="btn btn-outline-primary btn-lg">Botão</button>
+                </div>
+            </div>
+            <div class="button-block">
+                <button id="btn-block" onclick="buttonSelected('btn-block')" type="button" class="btn btn-outline-primary btn-block">Botão</button>
+            </div>
+        </div>
+
+        <div class="content button-group">
+            <div>
+                <div class="small" onclick="buttonGroupSelected('small', '5px')">
+                    <button type="button" class="btn btn-outline-primary">botão 1</button>
+                    <button type="button" class="btn btn-outline-primary">botão 2</button>
+                </div>
+                <div class="normal" onclick="buttonGroupSelected('normal', '10px')">
+                    <button type="button" class="btn btn-outline-primary">botão 1</button>
+                    <button type="button" class="btn btn-outline-primary">botão 2</button>
+                </div>
+            </div>
+            <div>
+                <div class="big" onclick="buttonGroupSelected('big', '25px')">
+                    <button type="button" class="btn btn-outline-primary">botão 1</button>
+                    <button type="button" class="btn btn-outline-primary">botão 2</button>
+                </div>
+                <div class="xbig" onclick="buttonGroupSelected('xbig', '40px')">
+                    <button type="button" class="btn btn-outline-primary">botão 1</button>
+                    <button type="button" class="btn btn-outline-primary">botão 2</button>
+                </div>
             </div>
         </div>
 
@@ -132,6 +134,7 @@
                 </div>
             </div>
         </div>
+
         <div class="content forms-group">
             <div id="form-small" onclick="formGroupSelected('form-small')">
                 <form class="form-small">
@@ -147,7 +150,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Aceito os termos de uso</label>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button type=button class="btn btn-outline-primary">Enviar</button>
                 </form>
             </div>
             <div id="form-normal" onclick="formGroupSelected('form-normal')">
@@ -164,7 +167,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Aceito os termos de uso</label>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button type=button class="btn btn-outline-primary">Enviar</button>
                 </form>
             </div>
             <div id="form-big" onclick="formGroupSelected('form-big')">
@@ -181,7 +184,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Aceito os termos de uso</label>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button type=button class="btn btn-outline-primary">Enviar</button>
                 </form>
             </div>
             <div id="form-xbig" onclick="formGroupSelected('form-xbig')">
@@ -198,10 +201,11 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Aceito os termos de uso</label>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button type=button class="btn btn-outline-primary">Enviar</button>
                 </form>
             </div>
         </div>
+
         <div class="finish">
             <h1>
                 Você selecionou todos os componentes!
@@ -210,8 +214,9 @@
                 Criamos uma página com os componentes selecionados
             </h4>
         </div>
-        <button id="next" type="button" class="btn btn-outline-secondary btn-lg">Próximo</button>
-        <button id="load-page" onclick="window.location='../adaptedPage/adaptedPage.html'" type="button" class="btn btn-outline-secondary btn-lg">Carregar Página</button>
+
+        <button id="next" type="button" class="btn btn-secondary btn-lg">Próximo</button>
+        <button id="load-page" onclick="window.location='../adaptedPage/adaptedPage.html'" type="button" class="btn btn-secondary btn-lg">Ir para Página</button>
     </div>
 
     <script src="../js/main.js"></script>
